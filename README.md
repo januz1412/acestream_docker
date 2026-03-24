@@ -37,6 +37,6 @@ open a terminal and run
 
 run vlc and open an `acestream:` hyperlink
 
-If this faild have a look to https://github.com/ilgonmic/vlc-acestream
+If this fails have a look to https://github.com/ilgonmic/vlc-acestream
 
 
