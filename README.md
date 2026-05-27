@@ -48,12 +48,13 @@ create the handler
 $ nano ~/.local/share/applications/acestream-launcher.desktop
 ```
 
-Paste the following configuration into the file:
+Paste the following configuration into the file.
+Note update the path wehre acestream-launcher.sh is
 ```
 [Desktop Entry]
 Name=AceStream Launcher
 Comment=Play AceStream links with VLC
-Exec=acestream-launcher "%u"
+Exec=/home/YOUR_USER_HERE/bin/acestream-launcher.sh "%u"
 Terminal=false
 Type=Application
 MimeType=x-scheme-handler/acestream;
