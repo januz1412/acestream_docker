@@ -3,7 +3,7 @@ a simple docker to run locally the [AceStream Engine](https://www.acestream.org)
 
 ## Requirements:
 - VLC media player
-- docker
+- docker (follow the instructions at https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04 )
 
 ## Installation:
 (replace `YOUR_DOWNLOAD_DIRECTORY` with the path where you have downloaded the repository files
