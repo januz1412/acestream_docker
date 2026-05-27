@@ -75,9 +75,8 @@ RUN wget -O /tmp/acestream.tar.gz "$ACESTREAM_TAR_URL" && \
 # --------------------------------------------------------------
 # 8️⃣  Install AceStream (the tarball ships a setup.py‑style installer)
 # --------------------------------------------------------------
-RUN python3.10 -m pip install --upgrade pip setuptools wheel
-RUN python3.10 -m pip install -r requirements.txt
-
+RUN python3.10 -m pip install --upgrade "pip<24" "setuptools<82" "wheel<0.45"
+RUN python3.10 -m pip install "setuptools<82" -r requirements.txt
 # --------------------------------------------------------------
 # 9️⃣  Create a non‑root user that will run the daemon
 # --------------------------------------------------------------
