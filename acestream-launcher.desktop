@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=AceStream Launcher
+Comment=Play AceStream links with VLC
+Exec=/YOUR_BIN_DIRECTORY/acestream-launcher.sh %u
+Terminal=false
+Type=Application
+MimeType=x-scheme-handler/acestream;
+Categories=Network;Video;Player;
