@@ -41,7 +41,7 @@ alias acestream-start='docker rm -f acestream; /usr/bin/docker run -d --name ace
 ### Create the launcher
 the launcher is acestream-launcher.sh that uses vlc as media player.
 
-copy acestram-launcher.sh in YOUR_BIN_DIRECTORY, a directory included in $PATH (e.g. `~/bin`):
+copy acestram-launcher.sh in `YOUR_BIN_DIRECTORY`, a directory included in `$PATH` (e.g. `~/bin`):
 ```
 cp YOUR_DOWNLOAD_DIRECTORY/acestream-launcher.sh YOUR_BIN_DIRECTORY
 chmod 775 YOUR_BIN_DIRECTORY/acestream-launcher.sh*
@@ -55,37 +55,27 @@ acestream-launcher.sh acestream://ANY_WORKING_ACESTREAM_ID
 the vlc window should pop up and show the desired channel
 
 ### Set Up the Protocol Handler
-create the handler
+copy the handler
 ```
-$ nano ~/.local/share/applications/acestream-launcher.desktop
+$ cp YOUR_DOWNLOAD_DIRECTORY/acestream-launcher.desktop ~/.local/share/applications/
 ```
+edit it and replace `YOUR_BIN_DIRECTORY` with the proper path
 
-Paste the following configuration into the file.
-Note update the path wehre acestream-launcher.sh is
-```
-[Desktop Entry]
-Name=AceStream Launcher
-Comment=Play AceStream links with VLC
-Exec=/home/YOUR_USER_HERE/bin/acestream-launcher.sh "%u"
-Terminal=false
-Type=Application
-MimeType=x-scheme-handler/acestream;
-Categories=Network;Video;Player;
-```
+
 
 Update your desktop database to register the new protocol association with:
 ```
 $ update-desktop-database ~/.local/share/applications
 ```
 
-Set it as the Default Handler
+Set it as the default handler
 
 ```
 $ xdg-mime default acestream-launcher.desktop x-scheme-handler/acestream
 ```
 
 
-## run acestream
+## Nominal usage to watch an acestream
 open a terminal and run 
 
 ```
